@@ -14,11 +14,10 @@ class CityRepositoryImpl @Inject constructor(
                 id = it.id,
                 nameKorean = it.nameKorean,
                 nameKanji = it.nameKanji,
-                parentKorean = it.parentKorean,
+                prefecture = it.prefecture,
                 population = it.population,
                 area = it.area,
                 density = it.density,
-                date = it.date,
             )
         }
     }
@@ -30,11 +29,10 @@ class CityRepositoryImpl @Inject constructor(
                     id = it.id,
                     nameKorean = it.nameKorean,
                     nameKanji = it.nameKanji,
-                    parentKorean = it.parentKorean,
+                    prefecture = it.prefecture,
                     population = it.population,
                     area = it.area,
                     density = it.density,
-                    date = it.date,
                 )
             }
     }
@@ -45,11 +43,10 @@ class CityRepositoryImpl @Inject constructor(
                 id = it.id,
                 nameKorean = it.nameKorean,
                 nameKanji = it.nameKanji,
-                parentKorean = it.parentKorean,
+                prefecture = it.prefecture,
                 population = it.population,
                 area = it.area,
                 density = it.density,
-                date = it.date,
             )
         }
     }

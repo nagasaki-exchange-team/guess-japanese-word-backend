@@ -49,11 +49,10 @@ class CityDaoImpl @Inject constructor(
                 it[cityTable.id] = city.id
                 it[cityTable.nameKorean] = city.nameKorean
                 it[cityTable.nameKanji] = city.nameKanji
-                it[cityTable.parentKorean] = city.parentKorean
+                it[cityTable.prefecture] = city.prefecture
                 it[cityTable.population] = city.population
                 it[cityTable.area] = city.area
                 it[cityTable.density] = city.density
-                it[cityTable.date] = city.date
             }
         }
     }
@@ -65,11 +64,10 @@ class CityDaoImpl @Inject constructor(
                     it[cityTable.id] = city.id
                     it[cityTable.nameKorean] = city.nameKorean
                     it[cityTable.nameKanji] = city.nameKanji
-                    it[cityTable.parentKorean] = city.parentKorean
+                    it[cityTable.prefecture] = city.prefecture
                     it[cityTable.population] = city.population
                     it[cityTable.area] = city.area
                     it[cityTable.density] = city.density
-                    it[cityTable.date] = city.date
                 }
             }
         }
@@ -80,11 +78,10 @@ class CityDaoImpl @Inject constructor(
             id = row[cityTable.id],
             nameKorean = row[cityTable.nameKorean],
             nameKanji = row[cityTable.nameKanji],
-            parentKorean = row[cityTable.parentKorean],
+            prefecture = row[cityTable.prefecture],
             population = row[cityTable.population],
             area = row[cityTable.area],
             density = row[cityTable.density],
-            date = row[cityTable.date],
         )
     }
 }
