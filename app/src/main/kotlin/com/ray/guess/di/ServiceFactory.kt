@@ -1,6 +1,6 @@
 package com.ray.guess.di
 
-import com.ray.guess.presentation.student.StudentService
+import com.ray.guess.presentation.guess.city.CityService
 import dagger.Component
 import javax.inject.Singleton
 
@@ -11,5 +11,5 @@ import javax.inject.Singleton
 )
 @Singleton
 interface ServiceFactory {
-    fun studentService(): StudentService
+    fun cityService(): CityService
 }

@@ -1,6 +1,6 @@
 package com.ray.guess.data.source.local
 
-import com.ray.guess.data.source.local.student.StudentTable
+import com.ray.guess.data.source.local.guess.city.CityTable
 import kotlinx.coroutines.Dispatchers
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
@@ -9,13 +9,13 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import javax.inject.Inject
 
 class RayDatabase @Inject constructor(
-    private val studentTable: StudentTable
+    private val cityTable: CityTable
 ) {
     init {
         transaction(
             Database.connect(JDBC_URL, DRIVER_CLASS_NAME)
         ) {
-            SchemaUtils.create(studentTable)
+            SchemaUtils.create(cityTable)
         }
     }
 
@@ -27,6 +27,6 @@ class RayDatabase @Inject constructor(
 
     companion object {
         private const val DRIVER_CLASS_NAME = "org.h2.Driver"
-        private const val JDBC_URL = "jdbc:h2:file:./database/student"
+        private const val JDBC_URL = "jdbc:h2:file:./database/guess"
     }
 }

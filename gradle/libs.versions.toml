@@ -36,6 +36,7 @@ h2 = { module = "com.h2database:h2", version.ref = "h2" }
 exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
 exposed-dao = { module = "org.jetbrains.exposed:exposed-dao", version.ref = "exposed" }
 exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
+exposed-time = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "exposed" }
 # Common
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 
@@ -50,4 +51,4 @@ ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 [bundles]
 kotlin = ["kotlin", "kotlinx-coroutines-core"]
 presentation = ["ktor-server-core", "ktor-server-content-negotiation", "ktor-server-netty", "ktor-kotlinx-serialization", "kotlinx-serialization"]
-data = ["h2", "exposed-core", "exposed-dao", "exposed-jdbc"]
+data = ["h2", "exposed-core", "exposed-dao", "exposed-jdbc", "exposed-time"]

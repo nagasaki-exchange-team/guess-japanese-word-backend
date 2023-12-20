@@ -1,9 +1,9 @@
 package com.ray.guess.di
 
-import com.ray.guess.data.repository.StudentRepositoryImpl
-import com.ray.guess.data.source.local.student.StudentDao
-import com.ray.guess.data.source.local.student.StudentDaoImpl
-import com.ray.guess.domain.repository.StudentRepository
+import com.ray.guess.data.repository.guess.city.CityRepositoryImpl
+import com.ray.guess.data.source.local.guess.city.CityDao
+import com.ray.guess.data.source.local.guess.city.CityDaoImpl
+import com.ray.guess.domain.repository.guess.city.CityRepository
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
@@ -13,13 +13,13 @@ abstract class DataModule {
 
     @Binds
     @Singleton
-    abstract fun bindStudentRepository(
-        studentRepository: StudentRepositoryImpl
-    ): StudentRepository
+    abstract fun bindCityRepository(
+        cityRepository: CityRepositoryImpl
+    ): CityRepository
 
     @Binds
     @Singleton
-    abstract fun bindStudentDao(
-        studentDao: StudentDaoImpl
-    ): StudentDao
+    abstract fun bindSCityDao(
+        cityDao: CityDaoImpl
+    ): CityDao
 }
