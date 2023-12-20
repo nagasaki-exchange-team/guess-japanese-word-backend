@@ -12,7 +12,7 @@ ktor = "2.3.7"
 # Serialization
 kotlinx-serialization = "1.6.1"
 # Database
-h2 = "2.1.214"
+h2 = "2.2.224"
 exposed = "0.41.1"
 # Debug
 logback = "1.4.11"
