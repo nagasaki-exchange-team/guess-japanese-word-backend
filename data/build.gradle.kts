@@ -10,7 +10,7 @@ plugins {
 
 // TODO : 제거
 application {
-    mainClass = "com.ray.study.ktor.ApplicationKt"
+    mainClass = "com.ray.guess.ApplicationKt"
 }
 
 dependencies {

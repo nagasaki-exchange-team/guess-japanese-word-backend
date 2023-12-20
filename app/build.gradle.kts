@@ -8,12 +8,12 @@ plugins {
     id("io.sentry.jvm.gradle")
 }
 
-group = "com.ray.study.ktor"
+group = "com.ray.guess"
 version = libs.versions.versionname.get()
 
 application {
-    mainModule = "com.ray.study.ktor"
-    mainClass = "com.ray.study.ktor.ApplicationKt"
+    mainModule = "com.ray.guess"
+    mainClass = "com.ray.guess.ApplicationKt"
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
