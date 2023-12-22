@@ -2,6 +2,7 @@ package com.ray.guess.data.source.local
 
 import com.ray.guess.data.source.local.guess.city.CityTable
 import kotlinx.coroutines.Dispatchers
+import org.h2.tools.Server
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
@@ -17,6 +18,12 @@ class RayDatabase @Inject constructor(
         ) {
             SchemaUtils.create(cityTable)
         }
+
+        Server.createTcpServer(
+            COMMAND_TCP_PORT,
+            TCP_PORT,
+            COMMAND_ALLOW_TCP
+        ).start()
     }
 
     suspend fun <T> dbQuery(
@@ -28,5 +35,8 @@ class RayDatabase @Inject constructor(
     companion object {
         private const val DRIVER_CLASS_NAME = "org.h2.Driver"
         private const val JDBC_URL = "jdbc:h2:file:./database/guess"
+        private const val COMMAND_TCP_PORT = "-tcpPort"
+        private const val COMMAND_ALLOW_TCP = "-tcpAllowOthers"
+        private const val TCP_PORT = "9092"
     }
 }
